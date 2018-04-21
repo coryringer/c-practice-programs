@@ -11,18 +11,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define NUM(x) atof(argv[x])
+#define NUM atoi(argv[1])
 
-int main(void)
+int main(int argc, char ** argv)
 {
+    const int DEFAULT_COUNT = 10;
     const char * HEADING = "Fahrenheit\tCelsius";
-    const int LOOPCOUNT = 10;
+    int count;
+    
+    if (argc > 1)
+	count = NUM;
+    else
+	count = DEFAULT_COUNT;
     
     int i = 0;
     double fahr, cel;
 
     puts(HEADING);
-    while (i < LOOPCOUNT) {
+    while (i < count) {
 	const int INCREMENT = 100;
 	const int START_FAHR = 0;
 	const double FREEZING_POINT = 32.0;
