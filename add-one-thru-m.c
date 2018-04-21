@@ -1,5 +1,6 @@
-/*
+/**
  * Program filename: add-one-thru-m.c
+ * Author: Cory Ringer
  * Last Updated: 9 April 2018
  * Purpose: This program takes two numbers, N and M,
  * and outputs N + (1 + 2 + ... + M).

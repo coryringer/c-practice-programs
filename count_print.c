@@ -1,4 +1,8 @@
-// count_print.c
+/** 
+ * Program filename: count_print.c
+ * Author: Cory Ringer
+ * Last Updated: 9 April 2018
+ */
 #include <stdio.h>
 
 int main(void)
