@@ -52,16 +52,13 @@ int main(void)
         do {
             printf("> ");
             scanf(" %c", &input);
-            while (getchar() != '\n')
-                ;
+            while (getchar() != '\n');
 
-            switch(input)
-            {
+            switch(input) {
             case 'n':
                 val = NO;
                 break;
-            case 'N':
-                val = NO;
+            case 'N': val = NO;
                 break;
             case 'Y':
                 val = YES;
@@ -70,19 +67,18 @@ int main(void)
                 val = YES;
                 break;
             default:
-                printf("ERROR: Invalid entry.\n");
+                printf("Invalid entry.\n");
                 val = INVALID;
             }
         } while(val == INVALID);
     } while (val);
-    printf("Goodbye.\n");
     return 0;
 }
 
 /*
  * Function: run_game()
  * Purpose: Start game, terminate if user exits program.
- * Returns the number of guesses the user made before 
+ * Returns the number of guesses the user made before
  * winning game.
  */
 int run_game(void)
@@ -113,14 +109,15 @@ int run_game(void)
         count_guesses++;                  // increment counter
                                           // at every guess
         if (guess == QUIT_GAME) {
-            printf("Goodbye.\n");
+            printf("Number of guesses made: %i\n", count_guesses);
             exit(0);
         } else if ((guess < rand_number)  // replace low number
-                   && (guess > low))      // with guess if guess > low
-        { low = guess; }
-        else if ((guess > rand_number)    // replace high number
-                 && (guess < high))       // with guess if guess < high
-        { high = guess; }
+                   && (guess > low)) {    // with guess if guess > low
+            low = guess;
+        } else if ((guess > rand_number)  // replace high number
+                   && (guess < high)) {   // with guess if guess < high
+            high = guess;
+        }
     } while (guess != rand_number);
     return count_guesses;
 }
