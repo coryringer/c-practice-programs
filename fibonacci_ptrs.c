@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     *prev = 0;
     *curr = 1;
 
-    for (i = 0; i < size-1; i++) {
+    for (i = 0; i < SIZE-1; i++) {
         printf("%li\n", *prev);
         *(curr + 1) = *curr + *prev;
         prev = curr;
