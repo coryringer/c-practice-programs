@@ -1,6 +1,9 @@
 /*
  * Program filename: num_one.c
  * Author: Cory Ringer
+ * Purpose: This program takes an integer and
+ * gives the number of one's in the binary 
+ * representation of that integer.
  * Initial Version Date: October 2017
  * Last updated: 21 April 2018
  */
