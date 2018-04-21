@@ -2,7 +2,7 @@
  * Project name: hi_lo
  * Program filename: hi_lo.c
  * Author: Cory Ringer
- * Last Updated: 20 April 2018
+ * Last Updated: 21 April 2018
  */
 
 #include <stdio.h>
