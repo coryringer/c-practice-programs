@@ -1,8 +1,8 @@
 /**
  * Project name: hi_lo
- * Program filename: main.c
+ * Program filename: hi_lo.c
  * Author: Cory Ringer
- * Last Updated: 2 March 2018
+ * Last Updated: 20 April 2018
  */
 
 #include <stdio.h>
@@ -81,7 +81,9 @@ int main(void)
 
 /*
  * Function: run_game()
- * Purpose:
+ * Purpose: Start game, terminate if user exits program.
+ * Returns the number of guesses the user made before 
+ * winning game.
  */
 int run_game(void)
 {
@@ -114,7 +116,7 @@ int run_game(void)
             printf("Goodbye.\n");
             exit(0);
         } else if ((guess < rand_number)  // replace low number
-		   && (guess > low))      // with guess if guess > low
+                   && (guess > low))      // with guess if guess > low
         { low = guess; }
         else if ((guess > rand_number)    // replace high number
                  && (guess < high))       // with guess if guess < high
