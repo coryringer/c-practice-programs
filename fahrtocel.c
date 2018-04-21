@@ -17,9 +17,8 @@ int main(int argc, char ** argv)
 {
     const int DEFAULT_COUNT = 10;
     const char * HEADING = "Fahrenheit\tCelsius";
-    int count;
     int i = 0;
-    double fahr, cel;
+    int count;
     
     if (argc > 1)
 	count = NUM;
@@ -33,6 +32,7 @@ int main(int argc, char ** argv)
 	const double FREEZING_POINT = 32.0;
 	const double SCALE_FACTOR = (5.0 / 9.0);
 	const char * TABLE = "%.0lf\t\t%.2f\n";
+	double fahr, cel;
 	
 	fahr = i * INCREMENT + START_FAHR;
 	cel = (fahr - FREEZING_POINT) * SCALE_FACTOR;
