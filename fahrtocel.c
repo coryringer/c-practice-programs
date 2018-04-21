@@ -11,24 +11,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define FREEZING_POINT 32.0
-#define SCALE_FACTOR 5.0 / 9.0
-#define START_FAHR 0
-#define INCREMENT 100
-#define LOOPCOUNT 10
-
-#define HEADING "Fahrenheit\tCelsius"
-#define TABLE "%.0lf\t\t%.2f\n"
-
 #define NUM(x) atof(argv[x])
 
 int main(void)
 {
+    const char * HEADING = "Fahrenheit\tCelsius";
+    const int LOOPCOUNT = 10;
+    
     int i = 0;
     double fahr, cel;
 
     puts(HEADING);
     while (i < LOOPCOUNT) {
+	const int INCREMENT = 100;
+	const int START_FAHR = 0;
+	const double FREEZING_POINT = 32.0;
+	const double SCALE_FACTOR = (5.0 / 9.0);
+	const char * TABLE = "%.0lf\t\t%.2f\n";
+	
 	fahr = i * INCREMENT + START_FAHR;
 	cel = (fahr - FREEZING_POINT) * SCALE_FACTOR;
 	printf(TABLE, fahr, cel);
