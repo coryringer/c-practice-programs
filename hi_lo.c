@@ -18,13 +18,6 @@
  * -fix user query in main for restarting program
  */
 
-#define LOW_LIMIT       1
-#define HIGH_LIMIT      100
-#define QUIT_GAME       -1
-#define NO              0
-#define YES             1
-#define INVALID         2
-
 int run_game(void);
 
 /**
@@ -35,6 +28,10 @@ int run_game(void);
  */
 int main(void)
 {
+    const int NO = 0;
+    const int YES = 1;
+    const int INVALID = 2;
+    
     int val, count;
     char input;
 
@@ -83,6 +80,10 @@ int main(void)
  */
 int run_game(void)
 {
+    const int LOW_LIMIT = 1;
+    const int HIGH_LIMIT = 100;
+    const int QUIT_GAME = -1;
+    
     int guess, rand_number,
         count_guesses, low, high;
     time_t t;

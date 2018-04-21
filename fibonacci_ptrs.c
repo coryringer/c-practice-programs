@@ -6,14 +6,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define SIZE atoi(argv[1])
+
 int main(int argc, char **argv)
 {
     int i;
-    int size = atoi(argv[1]);
-    unsigned long int a[size], *prev, *curr;
+    unsigned long int fib_nums[SIZE], *prev, *curr;
 
-    prev = a;
-    curr = a + 1;
+    prev = fib_nums;
+    curr = fib_nums + 1;
     *prev = 0;
     *curr = 1;
 
