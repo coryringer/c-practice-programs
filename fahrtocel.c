@@ -11,8 +11,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define NUM atoi(argv[1])
-
 int main(int argc, char ** argv)
 {
     const int DEFAULT_COUNT = 10;
@@ -21,7 +19,7 @@ int main(int argc, char ** argv)
     int count;
     
     if (argc > 1)
-	count = NUM;
+	count = atoi(argv[1]);
     else
 	count = DEFAULT_COUNT;
 
